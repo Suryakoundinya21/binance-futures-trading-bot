@@ -1,0 +1,147 @@
+2025-06-10 09:12:03 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2025-06-10 09:12:03 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1749546723412}
+2025-06-10 09:12:04 | INFO     | trading_bot.client | Response 200: {"orderId":4751823,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-Testnet-abc123","price":"0","avgPrice":"67412.30","origQty":"0.001","executedQty":"0.001","cumQuote":"67.41230","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1749546724001}
+2025-06-10 09:12:04 | INFO     | trading_bot.orders | Order response:
+──────────────────────────────────────────────────
+  ORDER RESPONSE
+──────────────────────────────────────────────────
+  Order ID       : 4751823
+  Client OID     : x-Testnet-abc123
+  Status         : FILLED
+  Executed Qty   : 0.001
+  Avg Price      : 67412.30
+  Cumulative USD : 67.41230
+──────────────────────────────────────────────────
+2025-06-10 09:15:47 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : SELL
+  Type       : LIMIT
+  Quantity   : 0.001
+  Price      : 70000
+──────────────────────────────────────────────────
+2025-06-10 09:15:47 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '70000', 'timeInForce': 'GTC', 'timestamp': 1749546947881}
+2025-06-10 09:15:48 | INFO     | trading_bot.client | Response 200: {"orderId":4751901,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-Testnet-def456","price":"70000","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1749546948002}
+2025-06-10 09:15:48 | INFO     | trading_bot.orders | Order response:
+──────────────────────────────────────────────────
+  ORDER RESPONSE
+──────────────────────────────────────────────────
+  Order ID       : 4751901
+  Client OID     : x-Testnet-def456
+  Status         : NEW
+  Executed Qty   : 0
+  Avg Price      : 0
+  Cumulative USD : 0
+──────────────────────────────────────────────────
+2025-06-10 09:18:55 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : STOP_MARKET
+  Quantity   : 0.001
+  Stop Price : 68000
+──────────────────────────────────────────────────
+2025-06-10 09:18:55 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '68000', 'timestamp': 1749547135662}
+2025-06-10 09:18:56 | INFO     | trading_bot.client | Response 200: {"orderId":4752045,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-Testnet-ghi789","price":"0","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"68000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1749547136003}
+2025-06-10 09:18:56 | INFO     | trading_bot.orders | Order response:
+──────────────────────────────────────────────────
+  ORDER RESPONSE
+──────────────────────────────────────────────────
+  Order ID       : 4752045
+  Client OID     : x-Testnet-ghi789
+  Status         : NEW
+  Executed Qty   : 0
+  Avg Price      : 0
+  Cumulative USD : 0
+──────────────────────────────────────────────────
+2025-06-10 09:22:10 | ERROR    | trading_bot.orders | Validation failed: Invalid side 'LONG'. Must be one of: BUY, SELL.
+2025-06-10 09:23:44 | ERROR    | trading_bot.orders | Validation failed: Price is required for LIMIT orders.
+2025-06-10 09:25:01 | ERROR    | trading_bot.client | Response 400: {"code":-1121,"msg":"Invalid symbol."}
+2025-06-10 09:25:01 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -1121: Invalid symbol.
+2026-02-20 10:51:27 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2026-02-20 10:51:27 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1771564887182}
+2026-02-20 10:51:28 | INFO     | trading_bot.client | Response 401: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-02-20 10:51:28 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-02-20 10:54:16 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2026-02-20 10:54:16 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1771565056148}
+2026-02-20 10:54:17 | INFO     | trading_bot.client | Response 401: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-02-20 10:54:17 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-02-20 10:54:25 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2026-02-20 10:54:25 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1771565065925}
+2026-02-20 10:54:26 | ERROR    | trading_bot.client | SSL error: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/order (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+2026-02-20 10:54:26 | ERROR    | trading_bot.orders | Network error placing order: SSL verification failed.
+2026-02-20 10:54:35 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2026-02-20 10:54:35 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1771565075833}
+2026-02-20 10:54:36 | INFO     | trading_bot.client | Response 401: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-02-20 10:54:36 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-02-20 15:01:51 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+──────────────────────────────────────────────────
+2026-02-20 15:01:51 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1771579911173}
+2026-02-20 15:01:52 | INFO     | trading_bot.client | Response 401: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-02-20 15:01:52 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-02-20 15:01:58 | INFO     | trading_bot.orders | Placing order:
+──────────────────────────────────────────────────
+  ORDER REQUEST SUMMARY
+──────────────────────────────────────────────────
+  Symbol     : BTCUSDT
+  Side       : SELL
+  Type       : LIMIT
+  Quantity   : 0.001
+  Price      : 70000
+──────────────────────────────────────────────────
+2026-02-20 15:01:58 | INFO     | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | body: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '70000', 'timeInForce': 'GTC', 'timestamp': 1771579918046}
+2026-02-20 15:01:58 | INFO     | trading_bot.client | Response 401: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-02-20 15:01:58 | ERROR    | trading_bot.orders | API error placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-02-20 15:05:49 | ERROR    | trading_bot.orders | Validation failed: Price is required for LIMIT orders.
+2026-02-20 15:05:49 | ERROR    | trading_bot.orders | Validation failed: Quantity must be greater than 0, got '-5'.
